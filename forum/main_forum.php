@@ -15,13 +15,66 @@ mysqli_select_db($conn,$db_name)or die("cannot select DB");
 
 $sql="SELECT * FROM $tbl_name ORDER BY id DESC";
 
-
 // OREDER BY id DESC is order result by descending
 
 $result=mysqli_query($conn,$sql);
 ?>
 
-<table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#CCCCCC">
+<style>
+    a
+    {
+        color: #ff6666;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    
+    body
+    {
+        background-color: lightpink;
+        height: 100%;
+        width: 100%;
+        font-family: sans-serif;
+    }
+    
+    table
+    {
+        height: 100%;
+        width: 100%;
+    }
+    
+    td
+    {
+        height: 16%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        color: #ffaaaa;
+    }
+    
+    td strong
+    {
+        
+    }
+    
+    .container
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .container h1
+    {
+        font-family: serif;
+        text-transform: uppercase;
+        color: darkred;
+    }
+</style>
+
+<div class = "container">
+    <h1><strong>Support Forum</strong></h1>
+</div>
+
+<table width="90%" border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#ff00ff">
 <tr>
 <td width="6%" align="center" bgcolor="#E6E6E6"><strong>S.no:</strong></td>
 <td width="53%" align="center" bgcolor="#E6E6E6"><strong>Title</strong></td>

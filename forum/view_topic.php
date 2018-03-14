@@ -17,15 +17,15 @@ $result=mysqli_query($conn,$sql);
 $rows=mysqli_fetch_array($result);
 ?>
 
-<table width="400" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
 <tr>
 <td><table width="100%" border="0" cellpadding="3" cellspacing="1" bordercolor="1" bgcolor="#FFFFFF">
 <tr>
-<td bgcolor="#F8F7F1"><strong><?php echo $rows['topic']; ?></strong></td>
+<td bgcolor="#F8F7F1" style="padding:20px 0px; font-family: sans-serif; color: red; text-transform: uppercase;"><strong><?php echo $rows['topic']; ?></strong></td>
 </tr>
 
 <tr>
-<td bgcolor="#F8F7F1"><?php echo $rows['detail']; ?></td>
+<td bgcolor="#F8F7F1" style="padding:20px 0px; font-family: serif; color: black; text-transform: uppercase;"><?php echo $rows['detail']; ?></td>
 </tr>
 
 <tr>

@@ -7,6 +7,7 @@
         <link href="https://fonts.googleapis.com/css?family=Arvo|Slabo+27px" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>   
         <script>
+            let status = 0;
             function getUserMedia(options, successCallback, failureCallback) {
               var api = navigator.getUserMedia || navigator.webkitGetUserMedia ||
                 navigator.mozGetUserMedia || navigator.msGetUserMedia;
@@ -44,10 +45,10 @@
     </head>
     
     <body>
-        <div class = "container-fluid">
-            <div class="jumbotron jumbotron-fluid">
+        <div class = "container-fluid" >
+            <div class="jumbotron jumbotron-fluid" style = "background-image : url(sheteam.jpg) !important; background-size: cover;">
               <div class="container">
-                <h1>Police Livefeed</h1> 
+                <h1 class="text-center">Police Livefeed</h1> 
                 <div id="target"></div>
               <video controls autoplay style="height:450px; width: 100%; display:none" id="videos"></video>
 
@@ -63,8 +64,11 @@
             function appendLocation(location, verb) {
               verb = verb || 'updated';
               var newLocation = document.createElement('div');
-              newLocation.innerHTML = '<a href="https://maps.google.com/maps?&z=15&q=' + location.coords.latitude + '+' + location.coords.longitude + '&ll=' + location.coords.latitude + '+' + location.coords.longitude + '" target="_blank">' + '<button class = "btn btn-warning> Track Location </button></a>';
-              target.appendChild(newLocation);
+              newLocation.innerHTML = '<a href="https://maps.google.com/maps?&z=15&q=' + location.coords.latitude + '+' + location.coords.longitude + '&ll=' + location.coords.latitude + '+' + location.coords.longitude + '" target="_blank">' + '<button class = "btn btn-warning" style = "margin-left: 480px; margin-top: 15px; margin-bottom: 15px;"> Track Location </button></a>';
+                if(status == 0){
+                target.appendChild(newLocation);
+                    status = 1;
+                }
             }
 
             if ('geolocation' in navigator) {
