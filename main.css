@@ -125,4 +125,11 @@ body
     border-bottom-right-radius: 20px;
 }
 
+#first .danger
+{
+    align-self: flex-start;
+    margin-top:50px;
+    margin-left: 240px;
+    margin-right: auto;
+}
 

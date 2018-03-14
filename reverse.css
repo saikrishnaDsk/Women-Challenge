@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+.rightside
+{
+    padding-right: 20px;
+}
+
+#back
+{
+    width: 100%;
+    height: 100%;
+    background-image: url(secrets.jpeg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#cord
+{
+    
+}
