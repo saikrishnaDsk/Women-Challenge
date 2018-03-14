@@ -37,9 +37,10 @@
                   <div class="card-body trans">
                     <h2 class="card-title text-white ">Uncover a box of secrets</h2>
                     <p class="card-text text-light">Know where your photo has been uploaded</p>
-                    <form action="/action_page.php">
+                    <form action="test.php" method="post">
                       <input type="file" name="pic" accept="image/*" class = "btn btn-dark btn-sm">
                         <br><br>
+                        <input value="url" name = "Website">
                       <input type="submit" value = "Submit" class = "btn btn-danger btn-lg">
                     </form>
 
