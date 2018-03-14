@@ -45,7 +45,7 @@
                 <div class = "content">
                     <h2>A helping hand is always ready</h2>
                     <h3>Don't let them get away with it</h3>
-                    <a href="/forum/main_forum.php">  <button>Go to Complaint Forums</button></a>
+                    <a href="forum/main_forum.php">  <button>Go to Complaint Forums</button></a>
                 </div>
         </div>
 
