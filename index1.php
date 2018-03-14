@@ -83,7 +83,7 @@
                 <div class = "content">
                     <h2>A helping hand is always ready</h2>
                     <h3>Don't let them get away with it</h3>
-                    <button>Go to Complaint Forums</button>
+                    <a href="main_forum.php">  <button>Go to Complaint Forums</button></a>
                 </div>
         </div>
 
@@ -91,7 +91,7 @@
                 <div class = "content">
                     <h2>Don't give up</h2>
                     <h3>Make your voice heard</h3>
-                    <button>Check Support Resources</button>
+                   <button>Check Support Resources</button>
                 </div>
         </div>
 
