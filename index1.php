@@ -5,43 +5,7 @@
         <link rel = "stylesheet" href="main.css">
         <link href="https://fonts.googleapis.com/css?family=Karma" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Arvo|Slabo+27px" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script>
-            
-            
-            function getUserMedia(options, successCallback, failureCallback) {
-              var api = navigator.getUserMedia || navigator.webkitGetUserMedia ||
-                navigator.mozGetUserMedia || navigator.msGetUserMedia;
-              if (api) {
-                return api.bind(navigator)(options, successCallback, failureCallback);
-              }
-            }
-
-            function getStream (type) {
-                let video = document.querySelector("#videos");
-                video.style.display = "block";
-              if (!navigator.getUserMedia && !navigator.webkitGetUserMedia &&
-                !navigator.mozGetUserMedia && !navigator.msGetUserMedia) {
-                alert('User Media API not supported.');
-                return;
-              }
-                
-              var constraints = {};
-              constraints[type] = true;
-              getUserMedia(constraints, function (stream) {
-                var mediaControl = document.querySelector(type);
-
-                if ('srcObject' in mediaControl) {
-                  mediaControl.srcObject = stream;
-                  mediaControl.src = (window.URL || window.webkitURL).createObjectURL(stream);
-                } else if (navigator.mozGetUserMedia) {
-                  mediaControl.mozSrcObject = stream;
-                }
-              }, function (err) {
-                alert('Error: ' + err);
-              });
-            }
-        </script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
     </head>
 
     <body>
@@ -53,7 +17,7 @@
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item active" id="Logo" style="padding-left: 275px;">
-                <a class="navbar-brand" href="#">SafeHer <br><button class = "btn btn-danger btn-sm" id = "askButton">In Danger?</button><span class="sr-only">(SafeHer)</span></a>
+                  <a class="navbar-brand" href="#">SafeHer <br><a href = "livefeed.html"><button class = "btn btn-danger btn-sm" id = "askButton">In Danger?</button></a><span class="sr-only">(SafeHer)</span></a>
               </li>
               <li class="nav-item">
               </li>
@@ -68,9 +32,7 @@
             </span>
           </div>
         </nav>
-              <video controls autoplay style="height:180px; width: 100%; display:none" id="videos"></video>
         <div id = "first">
-            <div id="target"></div>
             <div class = "content">
                 <h2>Beware of people masquerading as you</h2>
                 <h3>Check if someone is pretending to be you</h3>
@@ -97,30 +59,5 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-            <script>
-            var target = document.getElementById('target');
-            var watchId;
-
-            function appendLocation(location, verb) {
-              verb = verb || 'updated';
-              var newLocation = document.createElement('p');
-              newLocation.innerHTML = 'Location ' + verb + ': <a href="https://maps.google.com/maps?&z=15&q=' + location.coords.latitude + '+' + location.coords.longitude + '&ll=' + location.coords.latitude + '+' + location.coords.longitude + '" target="_blank">' + location.coords.latitude + ', ' + location.coords.longitude + '</a>';
-              target.appendChild(newLocation);
-            }
-
-            if ('geolocation' in navigator) {
-              document.getElementById('askButton').addEventListener('click', function () {
-                  getStream('video');
-                navigator.geolocation.getCurrentPosition(function (location) {
-                  appendLocation(location, 'fetched');
-                });
-                watchId = navigator.geolocation.watchPosition(appendLocation);
-              });
-            } else {
-              target.innerText = 'Geolocation API not supported.';
-            }
-
-        </script>
-
     </body>
 </html>
