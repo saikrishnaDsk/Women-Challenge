@@ -1,58 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
 body
 {
     margin:0;
     margin-top: 10px;
 }
 
-ul li
+.rightside
 {
-    list-style: none;
-    order:3;
-    margin-left:5px;
-    margin-right: 5px;
+    padding-right: 20px;
 }
-
-ul
+#logo
 {
-    background-color: #FF9800;
-    display: flex;
-    height: 40px;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    position: fixed;
-    top: 0px;
-    width: 100%;
-
-}
-
-ul li:nth-child(2)
-{
-    margin-left: auto;
-}
-
-ul li:nth-child(1)
-{
-    order: 1;
-    margin-right: auto;
-}
-
-
-ul li:nth-child(4)
-{
-    order: 2;
     margin-left: auto;
     margin-right: auto;
 }
 
-ul li a
-{
-    text-decoration: none;
-    color: white;
-    font-size: 1.1rem;
-    font-family: 'Karma', serif;
-    
-}
 
 #first
 {

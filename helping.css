@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+.rightside
+{
+    padding-right: 20px;
+}
+
+#seeimage
+{
+    display: flex;
+    align-items: flex-end;
+    background-image: url(worriedwoman.jpg);
+    height: 100%;
+    background-size: cover;
+}
+
+#blur
+{
+    display: flex;
+    background-image: url(blur.jpg);
+    align-items: flex-end;
+    justify-content: flex-end;
+    height: 100%;
+    background-size: cover;
+}
+
+#cardfirst
+{
+    width: 40%;
+    height: 45%;
+    border: 0px;
+}
+
+#cardsecond
+{
+    width: 40%;
+    height: 45%;
+    border: 0px;
+}
