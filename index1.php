@@ -60,7 +60,7 @@
             </ul>
             <span class="navbar-text">
               <ul class = "navbar-nav">
-                <li class="nav-item rightside"><a href="register.php"><button class = "btn btn-sm">Login</button></a></li>
+                <li class="nav-item rightside"><a href="login/register.php"><button class = "btn btn-sm">Login</button></a></li>
                 <li class="nav-item rightside">Cases Dealt</li>
                 <li class="nav-item rightside">My Rights</li>  
                 <li class="nav-item rightside">About Us</li>                  
@@ -83,7 +83,7 @@
                 <div class = "content">
                     <h2>A helping hand is always ready</h2>
                     <h3>Don't let them get away with it</h3>
-                    <a href="main_forum.php">  <button>Go to Complaint Forums</button></a>
+                    <a href="/forum/main_forum.php">  <button>Go to Complaint Forums</button></a>
                 </div>
         </div>
 
