@@ -48,8 +48,8 @@
             <div class="jumbotron jumbotron-fluid">
               <div class="container">
                 <h1>Police Livefeed</h1> 
-                <p id="target">Coordinates:</p>
-              <video controls autoplay style="height:180px; width: 100%; display:none" id="videos"></video>
+                <div id="target"></div>
+              <video controls autoplay style="height:450px; width: 100%; display:none" id="videos"></video>
 
               </div>
             </div>
@@ -62,8 +62,8 @@
 
             function appendLocation(location, verb) {
               verb = verb || 'updated';
-              var newLocation = document.createElement('p');
-              newLocation.innerHTML = 'Location ' + verb + ': <a href="https://maps.google.com/maps?&z=15&q=' + location.coords.latitude + '+' + location.coords.longitude + '&ll=' + location.coords.latitude + '+' + location.coords.longitude + '" target="_blank">' + location.coords.latitude + ', ' + location.coords.longitude + '</a>';
+              var newLocation = document.createElement('div');
+              newLocation.innerHTML = '<a href="https://maps.google.com/maps?&z=15&q=' + location.coords.latitude + '+' + location.coords.longitude + '&ll=' + location.coords.latitude + '+' + location.coords.longitude + '" target="_blank">' + '<button class = "btn btn-warning> Track Location </button></a>';
               target.appendChild(newLocation);
             }
 
