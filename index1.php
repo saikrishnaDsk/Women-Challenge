@@ -53,7 +53,7 @@
                 <div class = "content">
                     <h2>Don't give up</h2>
                     <h3>Make your voice heard</h3>
-                   <button>Check Support Resources</button>
+                   <a href = "rights.html"><button>Check Support Resources</button></a>
                 </div>
         </div>
 
